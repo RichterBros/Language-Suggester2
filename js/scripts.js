@@ -48,10 +48,9 @@ function Options(option1,option2,option3,option4, option5){
      let question1 ="";
    
      for (i=0; i < splitFirstQuestion.length; i++){
-      //question1 += "<span id='firstQuestion" + i + "'>"; 
-      question1 += "<span id='firstQuestion" + i + "'>";
-      question1 += splitFirstQuestion[i];
-      question1 += "</span>"
+       
+      question1 += "<span id='firstQuestion" + i + "'>" + splitFirstQuestion[i] + "</span>" + "&nbsp" ;
+    
    }
     return question1
     

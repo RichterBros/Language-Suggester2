@@ -1,28 +1,37 @@
-#firstQuestion0{
+.display-5 {
+    color: #3a3838;
+    text-align: center;
+  }
+
+  img {
+    width:450px;
+    height:225px;
+    border-radius:5px;
+    border-width:1px;
+    overflow:none;
+    border-color:#428bca;
+    border-style:solid;
+  }
+
+  #roboRogers {
     display: none;
-}
+  }
 
-#is{
+  #roboRogers2 {
     display: none;
-}
+  }
 
-#your{
+  #roboRogers3 {
     display: none;
+  }
+
+  body {
+    background-image: url('img/mac.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+  }
+
+  .jumbotron {
+    background: rgba(204, 204, 204, 0.9);
 }
-
-#favorite{
-    display: none;
-}
-
-#color{
-    display: none;
-}
-
-#test{
-    
-}
-
-
-
-
-
