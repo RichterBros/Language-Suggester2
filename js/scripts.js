@@ -1,9 +1,9 @@
 $(document).ready(function(){
-    $("#click").click(function(){ 
-    $("#w").delay("fast").fadeIn()
-    $("#h").delay("slow").fadeIn()
-    $("#a").delay("slow").fadeIn()
-});
+    
+    $("#w").delay("slow").fadeIn()
+    $("#w").delay("slow").fadeIn()
+    $("#w").delay("slow").fadeIn()
+    
     
     option.text()
     console.log(option.splitFirstQuestion)
@@ -32,9 +32,10 @@ function Options(option1,option2,option3,option4, option5){
   
 Options.prototype.text = function(){
     const question = "what is your favorite band?"
-    this.firstQuestionEntered = ""
+    
 
-    this.splitFirstQuestion = question.split("")
+    this.splitFirstQuestion = question.split("").delay("slow").fadeIn()
+    this.fadeText = this.splitFirstQuestion.forEach();
 
    
 
