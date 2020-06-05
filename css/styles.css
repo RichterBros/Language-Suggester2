@@ -1,8 +1,31 @@
-#w{
+#what{
     display: none;
 }
 
-#h{
+#is{
     display: none;
 }
 
+#your{
+    display: none;
+}
+
+#favorite{
+    display: none;
+}
+
+#color{
+    display: none;
+}
+
+
+
+
+
+
+
+#question1{
+
+height: 100px;
+border-style: solid;
+}
