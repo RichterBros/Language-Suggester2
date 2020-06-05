@@ -1,17 +1,69 @@
 body {
-  background-image:url('/img/mac.webp');
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: 100% 100%;
+ text-align: center;
+ background-image:url('/img/mac2.jpg');
+background-position: center;
+background-repeat: no-repeat;
+background-position-y: top;
 }
+form {
+  position: absolute;
+  text-align: left;
+  
+}
+
+
 
 .container{
 text-align: center;
-padding: 90px;
+padding: 0px;
 
-
+background-position-x: -250px;
+height: 850px;
 }
 
 #firstQuestion0{
   display: none;
+}
+
+#firstQuestion1{
+  display: none;
+}
+
+#firstQuestion2{
+  display: none;
+}
+
+#firstQuestion3{
+  display: none;
+}
+
+#firstQuestion4{
+  display: none;
+}
+
+#beverage{
+  display: none;
+}
+
+.form-group{
+  width: 200px;
+ 
+
+ 
+}
+#center{
+ text-align: center;
+
+ height: 800px;
+ 
+
+ 
+}
+.col-7{
+  text-align: center;
+}
+
+#center2{
+  top: 250px;
+  width: 500px;
 }

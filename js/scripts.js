@@ -1,18 +1,21 @@
 $(document).ready(function(){
     
-   
-    // $("#is").delay(200).fadeIn(200)
-    // $("#your").delay(400).fadeIn(200)
-    // $("#favorite").delay(600).fadeIn(200)
-    // $("#color").delay(800).fadeIn(200)
+  $("#submit").click(function() {
+    option.selections();
+ 
+});
     
-   // option.text()
     $("#test").append(option.text())
     console.log(option.text())
     console.log(option.splitFirstQuestion)
 
-    $("#firstQuestion0").delay(0).fadeIn(800)
+    $("#firstQuestion0").delay(0).fadeIn(200)
+    $("#firstQuestion1").delay(200).fadeIn(200)
+    $("#firstQuestion2").delay(600).fadeIn(200)
+    $("#firstQuestion3").delay(800).fadeIn(200)
+    $("#firstQuestion4").delay(1000).fadeIn(200)
 
+    $("#beverage").delay(1100).fadeIn(200)
   });
 
 
@@ -42,7 +45,7 @@ function Options(option1,option2,option3,option4, option5){
   
 
   Options.prototype.text = function(){
-        const question = "what is your favorite band?"
+        const question = "what is your favorite beverage?"
         
     
       const splitFirstQuestion = question.split(" ")
@@ -60,14 +63,7 @@ function Options(option1,option2,option3,option4, option5){
   }       
    
   
-  $("<span id='firstQuestion" + i + "'>").delay(200).fadeIn(200)
-
-      
-        
-    
-
-    
-
+ 
   Options.prototype.selections= function(){
     
     this.option1 = parseInt($("#beverage").val())
@@ -91,3 +87,10 @@ function Options(option1,option2,option3,option4, option5){
     }
   }
   
+
+      
+        
+    
+
+    
+
