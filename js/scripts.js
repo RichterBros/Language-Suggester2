@@ -1,8 +1,8 @@
 $(document).ready(function(){
     
     $("#w").delay("slow").fadeIn()
-    $("#w").delay("slow").fadeIn()
-    $("#w").delay("slow").fadeIn()
+    $("#h").delay("slow").fadeIn()
+    $("#a").delay("slow").fadeIn()
     
     
     option.text()
@@ -30,21 +30,30 @@ function Options(option1,option2,option3,option4, option5){
   }
  
   
-Options.prototype.text = function(){
-    const question = "what is your favorite band?"
-    
-
-    this.splitFirstQuestion = question.split("").delay("slow").fadeIn()
-    this.fadeText = this.splitFirstQuestion.forEach();
-
-   
-
-
-}
 
 
   var option = new Options()
   
+
+  Options.prototype.text = function(){
+        const question = "what is your favorite band?"
+        
+    
+      const splitFirstQuestion = question.split("")
+      console.log(splitFirstQuestion)
+      let fade = function(){
+        $("#question").append(splitFirstQuestion)
+    }       
+    console.log(splitFirstQuestion.forEach(fade))
+
+
+
+      
+        
+    }
+
+    
+
   Options.prototype.selections= function(){
     
     this.option1 = parseInt($("#beverage").val())
