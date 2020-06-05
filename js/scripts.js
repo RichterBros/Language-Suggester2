@@ -1,6 +1,6 @@
 $(document).ready(function(){
     
-   // $("#firstQuestion0").delay(0).fadeIn(800)
+   
     // $("#is").delay(200).fadeIn(200)
     // $("#your").delay(400).fadeIn(200)
     // $("#favorite").delay(600).fadeIn(200)
@@ -10,7 +10,10 @@ $(document).ready(function(){
     $("#test").append(option.text())
     console.log(option.text())
     console.log(option.splitFirstQuestion)
-});
+
+    $("#firstQuestion0").delay(0).fadeIn(800)
+
+  });
 
 
 
@@ -45,14 +48,14 @@ function Options(option1,option2,option3,option4, option5){
       const splitFirstQuestion = question.split(" ")
       console.log(splitFirstQuestion)
     
-     let question1 ="";
+   this.question1 ="";
    
      for (i=0; i < splitFirstQuestion.length; i++){
        
-      question1 += "<span id='firstQuestion" + i + "'>" + splitFirstQuestion[i] + "</span>" + "&nbsp" ;
+      this.question1 += "<span id='firstQuestion" + i + "'>" + splitFirstQuestion[i] + "</span>" + "&nbsp" ;
     
    }
-    return question1
+    return this.question1
     
   }       
    
