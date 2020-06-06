@@ -16,6 +16,10 @@ form {
   display: none;
 }
 
+#try{
+  display: none;
+}
+
 .container{
   text-align: center;
   padding: 0px;
@@ -23,6 +27,13 @@ form {
   background-position-x: -250px;
   height: 850px;
 }
+
+#text-center{
+  text-align: center;
+
+
+}
+
 #one{
   display: none;
 }
@@ -47,22 +58,32 @@ form {
 
 #test1{
   color: white;
+  display: none;
 }
 
 #test2{
   color: white;
+  display: none;
+  
+  
 }
 
 #test3{
   color: white;
+  display: none;
+ 
 }
 
 #test4{
   color: white;
+  display: none;
+  
 }
 
 #test5{
   color: white;
+  display: none;
+ 
 }
 
 
@@ -184,18 +205,29 @@ form {
 #form-group2{
   display: none;
 }
+#movie{
+  box-shadow: inset 0 0 10px #000000;
+}
 
 #form-group3{
   display: none;
+}
+#animal{
+  box-shadow: inset 0 0 10px #000000;
 }
 
 #form-group4{
   display: none;
 }
-
+#color{
+  box-shadow: inset 0 0 10px #000000;
+}
 
 #form-group5{
   display: none;
+}
+#music{
+  box-shadow: inset 0 0 10px #000000;
 }
 
 
@@ -207,9 +239,9 @@ form {
  }
 
 #centerFirst{
- text-align: center;
-margin-top: 200px;
- height: 800px;
+  text-align: center;
+  margin-top: 200px;
+  height: 800px;
  
 
  

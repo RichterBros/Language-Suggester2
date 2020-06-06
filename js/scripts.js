@@ -1,16 +1,16 @@
 $(document).ready(function(){
-  //$('#form-group1').bootstrapValidator();
   
   
-  $("#one").click(function() {
   
-    $("#first-form").hide();
-    $("#form-group1").hide();
-    $("#test1").hide();
-    $("#one").hide();
-    
-    option.firstQuestionInputted();
-    option.secondQuestionFadeOn()
+$("#one").click(function() {
+
+  $("#first-form").hide();
+  $("#form-group1").hide();
+  $("#test1").hide();
+  $("#test2").show();
+  $("#one").hide();
+  option.firstQuestionInputted();
+  option.secondQuestionFadeOn()
 
 });
 
@@ -51,21 +51,26 @@ $("#five").click(function() {
   $("#fifth-form").hide();
   $("#form-group5").hide();
   $("#test5").hide();
- // $("#test5").show();
+ 
   $("#five").hide();
   option.fifthQuestionInputted();
-  //option.fifthQuestionFadeOn()
   $("#submit").delay(1300).fadeIn(200)
   $("#submit").show();
 });
 
-  $("#submit").click(function() {
-    option.selections();
-    
-    
+$("#submit").click(function() {
+  $(".btn btn-primary").removeClass()
+  $("#try").show();
+  $("#submit").hide();
+  option.selections();
+   
+});
 
-  });
-    option.firstQuestionInputted();
+$("#try").click(function() {
+  location.reload();
+});
+  
+  option.firstQuestionInputted();
     console.log(option.firstQuestionInputted())
     $("#test1").append(option.text1())
     $("#test2").append(option.text2())
@@ -75,18 +80,23 @@ $("#five").click(function() {
     
     console.log(option.text1())
     console.log(option.splitFirstQuestion)
-
+    option.firstQuestionFadeOn();
+  
+  });
+  
+  Options.prototype.firstQuestionFadeOn = function(){
     $("#firstQuestion0").delay(0).fadeIn(200)
     $("#firstQuestion1").delay(200).fadeIn(200)
     $("#firstQuestion2").delay(600).fadeIn(200)
     $("#firstQuestion3").delay(800).fadeIn(200)
     $("#firstQuestion4").delay(1000).fadeIn(200)
-
+    $("#test1").show();
     $("#form-group1").delay(1100).fadeIn(200)
     $("#one").delay(1300).fadeIn(200)
-   
-  });
-  
+    }
+
+
+
   Options.prototype.secondQuestionFadeOn = function(){
     $("#secondQuestion0").delay(0).fadeIn(200)
     $("#secondQuestion1").delay(200).fadeIn(200)
@@ -99,17 +109,17 @@ $("#five").click(function() {
   
   }
   
-Options.prototype.thirdQuestionFadeOn = function(){
-  $("#thirdQuestion0").delay(0).fadeIn(200)
-  $("#thirdQuestion1").delay(200).fadeIn(200)
-  $("#thirdQuestion2").delay(600).fadeIn(200)
-  $("#thirdQuestion3").delay(800).fadeIn(200)
-  $("#thirdQuestion4").delay(1000).fadeIn(200)
+  Options.prototype.thirdQuestionFadeOn = function(){
+    $("#thirdQuestion0").delay(0).fadeIn(200)
+    $("#thirdQuestion1").delay(200).fadeIn(200)
+    $("#thirdQuestion2").delay(600).fadeIn(200)
+    $("#thirdQuestion3").delay(800).fadeIn(200)
+    $("#thirdQuestion4").delay(1000).fadeIn(200)
 
-  $("#form-group3").delay(1100).fadeIn(200)
-  $("#three").delay(1300).fadeIn(200)
+    $("#form-group3").delay(1100).fadeIn(200)
+    $("#three").delay(1300).fadeIn(200)
 
-}
+  }
 
 Options.prototype.fourthQuestionFadeOn = function(){
   $("#fourthQuestion0").delay(0).fadeIn(200)
