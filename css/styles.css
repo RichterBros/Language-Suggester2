@@ -21,6 +21,14 @@ padding: 0px;
 background-position-x: -250px;
 height: 850px;
 }
+#one{
+  display: none;
+}
+
+#two{
+  display: none;
+}
+
 
 #test1{
   color: white;
@@ -29,6 +37,13 @@ height: 850px;
 #test2{
   color: white;
 }
+
+#test3{
+  color: white;
+}
+
+
+
 
 #firstQuestion0{
   display: none;
@@ -70,6 +85,29 @@ height: 850px;
   display: none;
 }
 
+#thirdQuestion0{
+  display: none;
+}
+
+#thirdQuestion1{
+  display: none;
+}
+
+#thirdQuestion2{
+  display: none;
+}
+
+#thirdQuestion3{
+  display: none;
+}
+
+#thirdQuestion4{
+  display: none;
+}
+
+
+
+
 #form-group1{
   display: none;
 }
@@ -78,6 +116,9 @@ height: 850px;
   display: none;
 }
 
+#form-group3{
+  display: none;
+}
 .form-group{
   width: 200px;
  
