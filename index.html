@@ -1,116 +1,119 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <script src="js/jquery-3.4.1.js"></script>
-    <script src="js/scripts.js" ></script>
-    <title>Language Suggester</title>
-  </head>
-  <body>
-  <div class="container">
-  
 
-    
-   
+<head>
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/jquery-3.4.1.js"></script>
+  <script src="js/scripts.js"></script>
+  <title>Language Suggester</title>
+</head>
+
+<body>
+  <div class="container">
+
+
+
+
     <div class="row">
-    
+
       <div class="col-sm">
-        
+
       </div>
-      <div id="centerFirst" >
+      <div id="centerFirst">
         <div id="center2">
           <div id="text-center">
-            <span id="test1"></span> 
+            <span id="test1"></span>
             <span id="test2"></span>
             <span id="test3"></span>
             <span id="test4"></span>
             <span id="test5"></span>
           </div>
-        <form id="first-form">
-          <div class= "form-group" id="form-group1">
-            <label for="sel1"></label>
-            <select class="form-control" id="beverage">
-              <option disabled selected value> -- select an option -- </option>
-              <option value="1">Water</option>
-              <option value="2">Soda</option>
-              <option value="3">Juice</option>
-              <option value="4">Coffee</option>
-            </select>
-          </div>
-        </form>
-        <form id="second-form">
-          <div class= "form-group" id="form-group2">
-            <label for="sel1"></label>
-            <select class="form-control" id="movie">
-              <option disabled selected value> -- select an option -- </option>
-              <option value="1">The Good, the Bad and the Ugly</option>
-              <option value="2">Terminator 2</option>
-              <option value="3">The Matrix</option>
-              <option value="4">The Goonies</option>
-            </select>
-          </div>
-        </form>
-        <form id="third-form">
-          <div class= "form-group" id="form-group3">
-            <label for="sel1"></label>
-            <select class="form-control" id="animal">
-              <option disabled selected value> -- select an option -- </option>
-              <option value="1">dog</option>
-              <option value="2">cat</option>
-              <option value="3">giraffe</option>
-              <option value="4">elephant</option>
-            </select>
-          </div>
-        </form>
-        <form id="fourth-form">
-          <div class= "form-group" id="form-group4">
-            <label for="sel1"></label>
-            <select class="form-control" id="color">
-              <option disabled selected value> -- select an option -- </option>
-              <option value="1">red</option>
-              <option value="2">blue</option>
-              <option value="3">green</option>
-              <option value="4">yellow</option>
-            </select>
-          </div>
-        </form>
-        <form id="fifth-form">
-          <div class= "form-group" id="form-group5">
-            <label for="sel1"></label>
-            <select class="form-control" id="music">
-              <option disabled selected value> -- select an option -- </option>
-              <option value="1">rock</option>
-              <option value="2">rap</option>
-              <option value="3">classical</option>
-              <option value="4">pop</option>
-            </select>
-          </div>
-        </form>
-      
-      
-      
-      </div>
-      <button type="button" class="btn btn-success" id = "one">submit beverage</button>
-      <button type="button" class="btn btn-success" id = "two">submit movie</button>
-      <button type="button" class="btn btn-success" id = "three">submit animal</button>
-      <button type="button" class="btn btn-success" id = "four">submit color</button>
-      <button type="button" class="btn btn-success" id = "five">submit music</button>
-      <button type="button" class="btn btn-primary" id = "submit">submit answers</button>
-      <button type="button" class="btn btn-info" id = "try">go again!</button>
-      <h5 id ="results"></h5>
+          <form id="first-form">
+            <div class="form-group" id="form-group1">
+              <label for="sel1"></label>
+              <select class="form-control" id="beverage">
+                <option disabled selected value> -- select an option -- </option>
+                <option value="1">Water</option>
+                <option value="2">Soda</option>
+                <option value="3">Juice</option>
+                <option value="4">Coffee</option>
+              </select>
+            </div>
+          </form>
+          <form id="second-form">
+            <div class="form-group" id="form-group2">
+              <label for="sel1"></label>
+              <select class="form-control" id="movie">
+                <option disabled selected value> -- select an option -- </option>
+                <option value="1">The Good, the Bad and the Ugly</option>
+                <option value="2">Terminator 2</option>
+                <option value="3">The Matrix</option>
+                <option value="4">The Goonies</option>
+              </select>
+            </div>
+          </form>
+          <form id="third-form">
+            <div class="form-group" id="form-group3">
+              <label for="sel1"></label>
+              <select class="form-control" id="animal">
+                <option disabled selected value> -- select an option -- </option>
+                <option value="1">dog</option>
+                <option value="2">cat</option>
+                <option value="3">giraffe</option>
+                <option value="4">elephant</option>
+              </select>
+            </div>
+          </form>
+          <form id="fourth-form">
+            <div class="form-group" id="form-group4">
+              <label for="sel1"></label>
+              <select class="form-control" id="color">
+                <option disabled selected value> -- select an option -- </option>
+                <option value="1">red</option>
+                <option value="2">blue</option>
+                <option value="3">green</option>
+                <option value="4">yellow</option>
+              </select>
+            </div>
+          </form>
+          <form id="fifth-form">
+            <div class="form-group" id="form-group5">
+              <label for="sel1"></label>
+              <select class="form-control" id="music">
+                <option disabled selected value> -- select an option -- </option>
+                <option value="1">rock</option>
+                <option value="2">rap</option>
+                <option value="3">classical</option>
+                <option value="4">pop</option>
+              </select>
+            </div>
+          </form>
+
+
+
+        </div>
+        <button type="button" class="btn btn-success" id="one">submit beverage</button>
+        <button type="button" class="btn btn-success" id="two">submit movie</button>
+        <button type="button" class="btn btn-success" id="three">submit animal</button>
+        <button type="button" class="btn btn-success" id="four">submit color</button>
+        <button type="button" class="btn btn-success" id="five">submit music</button>
+        <button type="button" class="btn btn-primary" id="submit">submit answers</button>
+        <button type="button" class="btn btn-info" id="try">go again!</button>
+        <h5 id="results"></h5>
       </div>
       <div class="col-sm">
         <div id="valueTtest"></div>
       </div>
 
-   
+
+
+    </div>
 
   </div>
 
-</div>
-  
- 
 
-  </body>
+
+</body>
+
 </html>
