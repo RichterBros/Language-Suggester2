@@ -1,9 +1,9 @@
 body {
- text-align: center;
- background-image:url('/img/mac2.jpg');
-background-position: center;
-background-repeat: no-repeat;
-background-position-y: top;
+  text-align: center;
+  background-image:url('/img/mac2.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-position-y: top;
 }
 form {
   
@@ -12,14 +12,16 @@ form {
   padding-left: 150px;
 }
 
-
+#submit{
+  display: none;
+}
 
 .container{
-text-align: center;
-padding: 0px;
+  text-align: center;
+  padding: 0px;
 
-background-position-x: -250px;
-height: 850px;
+  background-position-x: -250px;
+  height: 850px;
 }
 #one{
   display: none;
@@ -37,6 +39,11 @@ height: 850px;
   display: none;
 }
 
+#five{
+  display: none;
+}
+
+
 
 #test1{
   color: white;
@@ -51,6 +58,10 @@ height: 850px;
 }
 
 #test4{
+  color: white;
+}
+
+#test5{
   color: white;
 }
 
@@ -137,12 +148,38 @@ height: 850px;
   display: none;
 }
 
+#fifthQuestion0{
+  display: none;
+}
+
+#fifthQuestion1{
+  display: none;
+}
+
+#fifthQuestion2{
+  display: none;
+}
+
+#fifthQuestion3{
+  display: none;
+}
+
+#fifthQuestion4{
+  display: none;
+}
+
 
 
 
 #form-group1{
   display: none;
+  
 }
+#beverage{
+  box-shadow: inset 0 0 10px #000000;
+}
+
+
 
 #form-group2{
   display: none;
@@ -156,6 +193,10 @@ height: 850px;
   display: none;
 }
 
+
+#form-group5{
+  display: none;
+}
 
 
 .form-group{

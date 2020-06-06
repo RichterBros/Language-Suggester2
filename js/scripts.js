@@ -1,23 +1,28 @@
 $(document).ready(function(){
+  //$('#form-group1').bootstrapValidator();
+  
+  
   $("#one").click(function() {
   
-    option.firstQuestionInputted();
+    
     $("#form-group1").hide();
     $("#test1").hide();
     $("#one").hide();
+    
+    option.firstQuestionInputted();
     option.secondQuestionFadeOn()
 
 });
 
 $("#two").click(function() {
   
-  option.secondQuestionInputted();
+  
   $("#form-group2").hide();
   $("#test2").hide();
   $("#test3").show();
   $("#two").hide();
 
-  
+  option.secondQuestionInputted();
   option.thirdQuestionFadeOn();
 
 });
@@ -32,8 +37,23 @@ $("#three").click(function() {
 });
 
 $("#four").click(function() {
- 
+  $("#form-group4").hide();
+  $("#test4").hide();
+  $("#test5").show();
+  $("#four").hide();
   option.fourthQuestionInputted();
+  option.fifthQuestionFadeOn()
+});
+
+$("#five").click(function() {
+  $("#form-group5").hide();
+  $("#test5").hide();
+ // $("#test5").show();
+  $("#five").hide();
+  option.fifthQuestionInputted();
+  //option.fifthQuestionFadeOn()
+  $("#submit").delay(1300).fadeIn(200)
+  $("#submit").show();
 });
 
   $("#submit").click(function() {
@@ -48,6 +68,7 @@ $("#four").click(function() {
     $("#test2").append(option.text2())
     $("#test3").append(option.text3())
     $("#test4").append(option.text4())
+    $("#test5").append(option.text5())
     
     console.log(option.text1())
     console.log(option.splitFirstQuestion)
@@ -99,6 +120,18 @@ Options.prototype.fourthQuestionFadeOn = function(){
 
 }
 
+Options.prototype.fifthQuestionFadeOn = function(){
+  $("#fifthQuestion0").delay(0).fadeIn(200)
+  $("#fifthQuestion1").delay(200).fadeIn(200)
+  $("#fifthQuestion2").delay(600).fadeIn(200)
+  $("#fifthQuestion3").delay(800).fadeIn(200)
+  $("#fifthQuestion4").delay(1000).fadeIn(200)
+
+  $("#form-group5").delay(1100).fadeIn(200)
+  $("#five").delay(1300).fadeIn(200)
+ 
+}
+
 
 
 
@@ -143,6 +176,13 @@ Options.prototype.fourthQuestionInputted = function(){
   this.option4 = parseInt($("#color").val())
 
 console.log(this.option4)
+}
+
+Options.prototype.fifthQuestionInputted = function(){
+  
+  this.option5 = parseInt($("#music").val())
+
+console.log(this.option5)
 }
 
 
@@ -204,6 +244,20 @@ console.log(this.option4)
                     return this.question4
                     
               } 
+
+
+              Options.prototype.text5 = function(){
+                const question = "what is your favorite music?"
+                const splitFirstQuestion = question.split(" ")
+                console.log(splitFirstQuestion)
+                this.question5 ="";
+                
+                for (i=0; i < splitFirstQuestion.length; i++){
+                this.question5 += "<span id='fifthQuestion" + i + "'>" + splitFirstQuestion[i] + "</span>" + "&nbsp" ;
+                    }
+                      return this.question5
+                      
+                } 
         
           
         
@@ -215,22 +269,16 @@ console.log(this.option4)
  
   Options.prototype.selections= function(){
     
-    this.option1 = parseInt($("#beverage").val())
-    this.option2 = parseInt($("#movie").val())
-    this.option3 = parseInt($("#animal").val())
-    this.option4 = parseInt($("#color").val())
-    this.option5 = parseInt($("#music").val())     
-  
-  this.counterTotal = this.option1 + this.option2 + this.option3 + this.option4;
+  this.counterTotal = this.option1 + this.option2 + this.option3 + this.option4 + this.option5;
   
   if(this.counterTotal <= 5){
-    $("#results").text("your language is C#")
+    $("#results").text("your language is C#!")
   }else if(this.counterTotal > 5 && this.counterTotal <=10){
-    $("#results").text("your language is JavaScript")
+    $("#results").text("your language is JavaScript!")
   }else if(this.counterTotal > 10 && this.counterTotal <=15){
-    $("#results").text("your language is Python")
+    $("#results").text("your language is Python!")
   }else if(this.counterTotal > 15 && this.counterTotal <=20){
-    $("#results").text("your language is Ruby")
+    $("#results").text("your language is Ruby!")
   }else{
     $("#results").text("please choose one of each option")
     }
