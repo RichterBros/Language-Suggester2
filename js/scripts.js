@@ -1,12 +1,34 @@
 $(document).ready(function(){
-    
+  $("#one").click(function() {
+  
+    option.firstQuestionInputted();
+    $("#form-group1").hide();
+    $("#test1").hide();
+    $("#one").hide();
+    option.secondQustionFadeOn()
+
+
+  });
+
+$("#two").click(function() {
+ 
+  option.secondQuestionInputted();
+});
+
+
   $("#submit").click(function() {
     option.selections();
- 
-});
     
-    $("#test").append(option.text())
-    console.log(option.text())
+    
+
+  });
+    option.firstQuestionInputted();
+    console.log(option.firstQuestionInputted())
+    $("#test1").append(option.text1())
+    $("#test2").append(option.text2())
+    
+    
+    console.log(option.text1())
     console.log(option.splitFirstQuestion)
 
     $("#firstQuestion0").delay(0).fadeIn(200)
@@ -15,14 +37,21 @@ $(document).ready(function(){
     $("#firstQuestion3").delay(800).fadeIn(200)
     $("#firstQuestion4").delay(1000).fadeIn(200)
 
-    $("#beverage").delay(1100).fadeIn(200)
+    $("#form-group1").delay(1100).fadeIn(200)
+
+   
   });
 
 
+Options.prototype.secondQustionFadeOn = function(){
+  $("#secondQuestion0").delay(0).fadeIn(200)
+  $("#secondQuestion1").delay(200).fadeIn(200)
+  $("#secondQuestion2").delay(600).fadeIn(200)
+  $("#secondQuestion3").delay(800).fadeIn(200)
+  $("#secondQuestion4").delay(1000).fadeIn(200)
 
-
-
-
+  $("#form-group2").delay(1100).fadeIn(200)
+}
 
 
 
@@ -38,29 +67,58 @@ function Options(option1,option2,option3,option4, option5){
     this.counterTotal = 0;
   }
  
+ 
+  Options.prototype.firstQuestionInputted = function(){
   
+    this.option1 = parseInt($("#beverage").val())
+  
+  console.log(this.option1)
+}
+  
+
+Options.prototype.secondQuestionInputted = function(){
+  
+  this.option2 = parseInt($("#movie").val())
+
+console.log(this.option2)
+}
 
 
   var option = new Options()
   
 
-  Options.prototype.text = function(){
+  Options.prototype.text1 = function(){
         const question = "what is your favorite beverage?"
+        const splitFirstQuestion = question.split(" ")
+        console.log(splitFirstQuestion)
+        this.question1 ="";
+        
+        for (i=0; i < splitFirstQuestion.length; i++){
+        this.question1 += "<span id='firstQuestion" + i + "'>" + splitFirstQuestion[i] + "</span>" + "&nbsp" ;
+            }
+              return this.question1
+              
+        } 
+        
+        
+        Options.prototype.text2 = function(){
+          const question = "what is your favorite movie?"
+          const splitFirstQuestion = question.split(" ")
+          console.log(splitFirstQuestion)
+          this.question2 ="";
+          
+          for (i=0; i < splitFirstQuestion.length; i++){
+          this.question2 += "<span id='secondQuestion" + i + "'>" + splitFirstQuestion[i] + "</span>" + "&nbsp" ;
+              }
+                return this.question2
+                
+          } 
+        
+          
         
     
-      const splitFirstQuestion = question.split(" ")
-      console.log(splitFirstQuestion)
+        
     
-   this.question1 ="";
-   
-     for (i=0; i < splitFirstQuestion.length; i++){
-       
-      this.question1 += "<span id='firstQuestion" + i + "'>" + splitFirstQuestion[i] + "</span>" + "&nbsp" ;
-    
-   }
-    return this.question1
-    
-  }       
    
   
  
@@ -72,7 +130,7 @@ function Options(option1,option2,option3,option4, option5){
     this.option4 = parseInt($("#color").val())
     this.option5 = parseInt($("#music").val())     
   
-  this.counterTotal = this.option1 + this.option2 + this.option3 + this.option4 + this.option5;
+  this.counterTotal = this.option1 + this.option2;
   
   if(this.counterTotal <= 5){
     $("#results").text("your language is C#")
@@ -85,6 +143,9 @@ function Options(option1,option2,option3,option4, option5){
   }else{
     $("#results").text("please choose one of each option")
     }
+  
+    console.log(this.counterTotal)
+  
   }
   
 

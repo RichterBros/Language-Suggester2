@@ -22,9 +22,14 @@ background-position-x: -250px;
 height: 850px;
 }
 
-#test{
+#test1{
   color: white;
 }
+
+#test2{
+  color: white;
+}
+
 #firstQuestion0{
   display: none;
 }
@@ -45,7 +50,31 @@ height: 850px;
   display: none;
 }
 
-#beverage{
+#secondQuestion0{
+  display: none;
+}
+
+#secondQuestion1{
+  display: none;
+}
+
+#secondQuestion2{
+  display: none;
+}
+
+#secondQuestion3{
+  display: none;
+}
+
+#secondQuestion4{
+  display: none;
+}
+
+#form-group1{
+  display: none;
+}
+
+#form-group2{
   display: none;
 }
 
@@ -55,7 +84,7 @@ height: 850px;
 
  
 }
-#centerFirstQuestion{
+#centerFirst{
  text-align: center;
 margin-top: 200px;
  height: 800px;
