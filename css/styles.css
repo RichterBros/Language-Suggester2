@@ -201,10 +201,11 @@ form {
 
 .form-group{
   width: 200px;
- 
+ }
+ .form-group1{
+  width: 200px;
+ }
 
- 
-}
 #centerFirst{
  text-align: center;
 margin-top: 200px;

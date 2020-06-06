@@ -4,7 +4,7 @@ $(document).ready(function(){
   
   $("#one").click(function() {
   
-    
+    $("#first-form").hide();
     $("#form-group1").hide();
     $("#test1").hide();
     $("#one").hide();
@@ -16,7 +16,7 @@ $(document).ready(function(){
 
 $("#two").click(function() {
   
-  
+  $("#second-form").hide();
   $("#form-group2").hide();
   $("#test2").hide();
   $("#test3").show();
@@ -28,6 +28,7 @@ $("#two").click(function() {
 });
 
 $("#three").click(function() {
+  $("#third-form").hide();
   $("#form-group3").hide();
   $("#test3").hide();
   $("#test4").show();
@@ -37,6 +38,7 @@ $("#three").click(function() {
 });
 
 $("#four").click(function() {
+  $("#fourth-form").hide();
   $("#form-group4").hide();
   $("#test4").hide();
   $("#test5").show();
@@ -46,6 +48,7 @@ $("#four").click(function() {
 });
 
 $("#five").click(function() {
+  $("#fifth-form").hide();
   $("#form-group5").hide();
   $("#test5").hide();
  // $("#test5").show();
