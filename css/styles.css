@@ -5,8 +5,8 @@ body {
   background-repeat: no-repeat;
   background-position-y: top;
 }
+
 form {
-  
   margin: auto;
   padding-top: 15px;
   padding-left: 150px;
@@ -23,15 +23,12 @@ form {
 .container{
   text-align: center;
   padding: 0px;
-
   background-position-x: -250px;
   height: 850px;
 }
 
 #text-center{
   text-align: center;
-
-
 }
 
 #one{
@@ -54,8 +51,6 @@ form {
   display: none;
 }
 
-
-
 #test1{
   color: white;
   display: none;
@@ -64,30 +59,22 @@ form {
 #test2{
   color: white;
   display: none;
-  
-  
 }
 
 #test3{
   color: white;
   display: none;
- 
 }
 
 #test4{
   color: white;
   display: none;
-  
 }
 
 #test5{
   color: white;
   display: none;
- 
 }
-
-
-
 
 #firstQuestion0{
   display: none;
@@ -189,9 +176,6 @@ form {
   display: none;
 }
 
-
-
-
 #form-group1{
   display: none;
   
@@ -199,8 +183,6 @@ form {
 #beverage{
   box-shadow: inset 0 0 10px #000000;
 }
-
-
 
 #form-group2{
   display: none;
@@ -226,10 +208,10 @@ form {
 #form-group5{
   display: none;
 }
+
 #music{
   box-shadow: inset 0 0 10px #000000;
 }
-
 
 .form-group{
   width: 200px;
@@ -242,10 +224,8 @@ form {
   text-align: center;
   margin-top: 200px;
   height: 800px;
- 
-
- 
 }
+
 .col-7{
   text-align: center;
 }
