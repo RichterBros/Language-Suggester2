@@ -26,12 +26,13 @@
           <form id="first-form">
             <div class="form-group" id="form-group1">
               <label for="sel1"></label>
-              <select class="form-control" id="beverage" required>
-                <option disabled selected value> -- select an option -- </option>
+              <select class="form-control" id="beverage"  data-validation="required">
+                <option required> -- select an option -- </option>
                 <option value="1">Water</option>
                 <option value="2">Soda</option>
                 <option value="3">Juice</option>
                 <option value="4">Coffee</option>
+                
               </select>
             </div>
           </form>
@@ -91,11 +92,13 @@
         <button type="button" class="btn btn-success" id="five">submit music</button>
         <button type="button" class="btn btn-primary" id="submit">submit answers</button>
         <button type="button" class="btn btn-info" id="try">go again!</button>
+        <div id="warning"></div>
+        <button type="button" class="btn btn-danger" id="form1-go-back">try again</button>
         <h5 id="results"></h5>
         <h4 id="youPicked"></h4>
       </div>
       <div class="col-sm">
-        <div id="valueTtest"></div>
+        
       </div>
     </div>
   </div>

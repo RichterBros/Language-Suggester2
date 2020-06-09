@@ -6,6 +6,9 @@ body {
   background-position-y: top;
 }
 
+#form1-go-back{
+  display: none;
+}
 form {
   margin: auto;
   padding-top: 15px;
@@ -25,6 +28,14 @@ form {
   padding: 0px;
   background-position-x: -250px;
   height: 850px;
+}
+
+.container-danger{
+  
+  height: 250px;
+  width: auto;
+  background-color: red;
+  z-index: -5;
 }
 
 #text-center{
@@ -255,4 +266,9 @@ form {
   text-align:left;
   font-size: large;
   margin-left: -80px;
+}
+
+#warning{
+  color: white;
+  font-size: x-large;
 }

@@ -62,6 +62,15 @@ function Options(option1, option2, option3, option4, option5) {
 
 Options.prototype.firstQuestionInputted = function () {
   this.option1 = parseInt($("#beverage").val())
+  console.log(this.option1)
+  if (!this.option1){
+    $("#warning").text("please choose an option")
+    $("#form1-go-back").show()
+    $("#warning").show()
+  }else{
+    
+    option.secondQuestionFadeOn()
+  }
 }
 
 Options.prototype.secondQuestionInputted = function () {
@@ -164,18 +173,24 @@ Options.prototype.youPicked = function(){
 
 $(document).ready(function () {
 
-  $("#one").click(function () {
-  option.warning()
-  
+$("#form1-go-back").click(function () {
+  option.firstQuestionInputted();
+  $("#first-form").show();
+  $("#form-group1").show();
+  $("#question1").show();
+  $("#one").show();
+  $("#form1-go-back").hide()
+  $("#warning").hide()
+});
+$("#one").click(function () {
+    
     $("#first-form").hide();
     $("#form-group1").hide();
     $("#question1").hide();
     $("#question2").show();
     $("#one").hide();
     option.firstQuestionInputted();
-    option.secondQuestionFadeOn()
-   
-  });
+    });
 
   $("#two").click(function () {
 
@@ -232,7 +247,6 @@ $(document).ready(function () {
     location.reload();
   });
 
-  option.firstQuestionInputted();
   $("#question1").append(option.text1())
   $("#question2").append(option.text2())
   $("#question3").append(option.text3())
