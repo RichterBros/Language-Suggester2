@@ -243,5 +243,16 @@ form {
 
 #youPicked{
   color: white;
+ text-align:left;
+ font-size:small ;
+ margin-left: 100px;
+  position: absolute;
+ 
 
+}
+
+#leftList{
+  text-align:left;
+  font-size: large;
+  margin-left: -80px;
 }

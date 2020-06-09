@@ -155,23 +155,26 @@ Options.prototype.selections = function () {
 }
 
 Options.prototype.youPicked = function(){
-  $("#youPicked").append("<ul> you picked: favorite beverage </ul>" + " "  + "<li>" + $("#beverage option:selected").text()) + "</li>"
-  
+  $("#youPicked").append("<ul id=leftList> You picked: </ul>" + "<li>" + "Favorite beverage:"  + " " + $("#beverage option:selected").text() + "</li>"
+  + "<li>" + "Favorite movie:"  + " " + $("#movie option:selected").text() + "</li>"
+  + "<li>" + "Favorite animal:"  + " " + $("#animal option:selected").text() + "</li>"
+  + "<li>" + "Favorite color:"  + " " + $("#color option:selected").text() + "</li>"
+  + "<li>" + "Favorite music:"  + " " + $("#music option:selected").text() + "</li>")
 }
-
-
-
 
 $(document).ready(function () {
 
   $("#one").click(function () {
-  $("#first-form").hide();
+  option.warning()
+  
+    $("#first-form").hide();
     $("#form-group1").hide();
     $("#question1").hide();
     $("#question2").show();
     $("#one").hide();
     option.firstQuestionInputted();
     option.secondQuestionFadeOn()
+   
   });
 
   $("#two").click(function () {
@@ -221,6 +224,7 @@ $(document).ready(function () {
     $("#try").show();
     $("#submit").hide();
     option.selections();
+    $("#youPicked").hide();
     
   });
 
