@@ -6,7 +6,7 @@ Options.prototype.firstQuestionFadeOn = function () {
   $("#firstQuestion2").delay(600).fadeIn(200)
   $("#firstQuestion3").delay(800).fadeIn(200)
   $("#firstQuestion4").delay(1000).fadeIn(200)
-  $("#test1").show();
+  $("#question1").show();
   $("#form-group1").delay(1100).fadeIn(200)
   $("#one").delay(1300).fadeIn(200)
 }
@@ -159,8 +159,8 @@ $(document).ready(function () {
   $("#one").click(function () {
   $("#first-form").hide();
     $("#form-group1").hide();
-    $("#test1").hide();
-    $("#test2").show();
+    $("#question1").hide();
+    $("#question2").show();
     $("#one").hide();
     option.firstQuestionInputted();
     option.secondQuestionFadeOn()
@@ -170,8 +170,8 @@ $(document).ready(function () {
 
     $("#second-form").hide();
     $("#form-group2").hide();
-    $("#test2").hide();
-    $("#test3").show();
+    $("#question2").hide();
+    $("#question3").show();
     $("#two").hide();
     option.secondQuestionInputted();
     option.thirdQuestionFadeOn();
@@ -180,8 +180,8 @@ $(document).ready(function () {
   $("#three").click(function () {
     $("#third-form").hide();
     $("#form-group3").hide();
-    $("#test3").hide();
-    $("#test4").show();
+    $("#question3").hide();
+    $("#question4").show();
     $("#three").hide();
     option.thirdQuestionInputted();
     option.fourthQuestionFadeOn();
@@ -190,8 +190,8 @@ $(document).ready(function () {
   $("#four").click(function () {
     $("#fourth-form").hide();
     $("#form-group4").hide();
-    $("#test4").hide();
-    $("#test5").show();
+    $("#question4").hide();
+    $("#question5").show();
     $("#four").hide();
     option.fourthQuestionInputted();
     option.fifthQuestionFadeOn()
@@ -200,7 +200,7 @@ $(document).ready(function () {
   $("#five").click(function () {
     $("#fifth-form").hide();
     $("#form-group5").hide();
-    $("#test5").hide();
+    $("#question5").hide();
     $("#five").hide();
     option.fifthQuestionInputted();
     $("#submit").show();
@@ -220,11 +220,11 @@ $(document).ready(function () {
 
   option.firstQuestionInputted();
   console.log(option.firstQuestionInputted())
-  $("#test1").append(option.text1())
-  $("#test2").append(option.text2())
-  $("#test3").append(option.text3())
-  $("#test4").append(option.text4())
-  $("#test5").append(option.text5())
+  $("#question1").append(option.text1())
+  $("#question2").append(option.text2())
+  $("#question3").append(option.text3())
+  $("#question4").append(option.text4())
+  $("#question5").append(option.text5())
   option.firstQuestionFadeOn();
 });
 
