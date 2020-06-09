@@ -154,6 +154,14 @@ Options.prototype.selections = function () {
   }
 }
 
+Options.prototype.youPicked = function(){
+  $("#youPicked").append("<ul> you picked: favorite beverage </ul>" + " "  + "<li>" + $("#beverage option:selected").text()) + "</li>"
+  
+}
+
+
+
+
 $(document).ready(function () {
 
   $("#one").click(function () {
@@ -204,6 +212,8 @@ $(document).ready(function () {
     $("#five").hide();
     option.fifthQuestionInputted();
     $("#submit").show();
+    option.youPicked();
+  
   });
 
   $("#submit").click(function () {
@@ -211,7 +221,7 @@ $(document).ready(function () {
     $("#try").show();
     $("#submit").hide();
     option.selections();
-
+    
   });
 
   $("#try").click(function () {
@@ -219,7 +229,6 @@ $(document).ready(function () {
   });
 
   option.firstQuestionInputted();
-  console.log(option.firstQuestionInputted())
   $("#question1").append(option.text1())
   $("#question2").append(option.text2())
   $("#question3").append(option.text3())
@@ -228,6 +237,7 @@ $(document).ready(function () {
   option.firstQuestionFadeOn();
 });
 
+  
 
 
 
