@@ -1,4 +1,13 @@
-
+function Options(option1, option2, option3, option4, option5) {
+  this.option1 = option1;
+  this.option2 = option2;
+  this.option3 = option3;
+  this.option4 = option4;
+  this.option5 = option5;
+  this.counterTotal = 0;
+ }
+ 
+let option = new Options();
 
 Options.prototype.firstQuestionFadeOn = function () {
   $("#firstQuestion0").delay(0).fadeIn(200)
@@ -51,24 +60,13 @@ Options.prototype.fifthQuestionFadeOn = function () {
   $("#five").delay(1300).fadeIn(200)
 }
 
-function Options(option1, option2, option3, option4, option5) {
-  this.option1 = option1;
-  this.option2 = option2;
-  this.option3 = option3;
-  this.option4 = option4;
-  this.option5 = option5;
-  this.counterTotal = 0;
-}
-
 Options.prototype.firstQuestionInputted = function () {
   this.option1 = parseInt($("#beverage").val())
-  console.log(this.option1)
-  if (!this.option1){
+  if (!this.option1) {
     $("#warning").text("please choose an option")
     $("#form1-go-back").show()
     $("#warning").show()
-  }else{
-    
+  } else {
     option.secondQuestionFadeOn()
   }
 }
@@ -89,8 +87,6 @@ Options.prototype.fifthQuestionInputted = function () {
   this.option5 = parseInt($("#music").val())
 }
 
-var option = new Options()
-
 Options.prototype.text1 = function () {
   const question = "what is your favorite beverage?"
   const splitFirstQuestion = question.split(" ")
@@ -99,7 +95,7 @@ Options.prototype.text1 = function () {
   for (i = 0; i < splitFirstQuestion.length; i++) {
     this.question1 += "<span id='firstQuestion" + i + "'>" + splitFirstQuestion[i] + "</span>" + "&nbsp";
   }
-  return this.question1
+    return this.question1
 }
 
 Options.prototype.text2 = function () {
@@ -110,7 +106,7 @@ Options.prototype.text2 = function () {
   for (i = 0; i < splitFirstQuestion.length; i++) {
     this.question2 += "<span id='secondQuestion" + i + "'>" + splitFirstQuestion[i] + "</span>" + "&nbsp";
   }
-  return this.question2
+    return this.question2
 }
 
 Options.prototype.text3 = function () {
@@ -121,7 +117,7 @@ Options.prototype.text3 = function () {
   for (i = 0; i < splitFirstQuestion.length; i++) {
     this.question3 += "<span id='thirdQuestion" + i + "'>" + splitFirstQuestion[i] + "</span>" + "&nbsp";
   }
-  return this.question3
+    return this.question3
 }
 
 Options.prototype.text4 = function () {
@@ -132,7 +128,7 @@ Options.prototype.text4 = function () {
   for (i = 0; i < splitFirstQuestion.length; i++) {
     this.question4 += "<span id='fourthQuestion" + i + "'>" + splitFirstQuestion[i] + "</span>" + "&nbsp";
   }
-  return this.question4
+    return this.question4
 }
 
 Options.prototype.text5 = function () {
@@ -143,11 +139,10 @@ Options.prototype.text5 = function () {
   for (i = 0; i < splitFirstQuestion.length; i++) {
     this.question5 += "<span id='fifthQuestion" + i + "'>" + splitFirstQuestion[i] + "</span>" + "&nbsp";
   }
-  return this.question5
+    return this.question5
 }
 
 Options.prototype.selections = function () {
-
   this.counterTotal = this.option1 + this.option2 + this.option3 + this.option4 + this.option5;
 
   if (this.counterTotal <= 5) {
@@ -163,37 +158,35 @@ Options.prototype.selections = function () {
   }
 }
 
-Options.prototype.youPicked = function(){
-  $("#youPicked").append("<ul id=leftList> You picked: </ul>" + "<li>" + "Favorite beverage:"  + " " + $("#beverage option:selected").text() + "</li>"
-  + "<li>" + "Favorite movie:"  + " " + $("#movie option:selected").text() + "</li>"
-  + "<li>" + "Favorite animal:"  + " " + $("#animal option:selected").text() + "</li>"
-  + "<li>" + "Favorite color:"  + " " + $("#color option:selected").text() + "</li>"
-  + "<li>" + "Favorite music:"  + " " + $("#music option:selected").text() + "</li>")
+Options.prototype.youPicked = function () {
+  $("#youPicked").append("<ul id=leftList> You picked: </ul>" + "<li>" + "Favorite beverage:" + " " + $("#beverage option:selected").text() + "</li>"
+    + "<li>" + "Favorite movie:" + " " + $("#movie option:selected").text() + "</li>"
+    + "<li>" + "Favorite animal:" + " " + $("#animal option:selected").text() + "</li>"
+    + "<li>" + "Favorite color:" + " " + $("#color option:selected").text() + "</li>"
+    + "<li>" + "Favorite music:" + " " + $("#music option:selected").text() + "</li>")
 }
 
 $(document).ready(function () {
-
-$("#form1-go-back").click(function () {
-  option.firstQuestionInputted();
-  $("#first-form").show();
-  $("#form-group1").show();
-  $("#question1").show();
-  $("#one").show();
-  $("#form1-go-back").hide()
-  $("#warning").hide()
-});
-$("#one").click(function () {
-    
+  $("#form1-go-back").click(function () {
+    option.firstQuestionInputted();
+    $("#first-form").show();
+    $("#form-group1").show();
+    $("#question1").show();
+    $("#one").show();
+    $("#form1-go-back").hide()
+    $("#warning").hide()
+  });
+  
+  $("#one").click(function () {
     $("#first-form").hide();
     $("#form-group1").hide();
     $("#question1").hide();
     $("#question2").show();
     $("#one").hide();
     option.firstQuestionInputted();
-    });
+  });
 
   $("#two").click(function () {
-
     $("#second-form").hide();
     $("#form-group2").hide();
     $("#question2").hide();
@@ -231,7 +224,6 @@ $("#one").click(function () {
     option.fifthQuestionInputted();
     $("#submit").show();
     option.youPicked();
-  
   });
 
   $("#submit").click(function () {
@@ -240,13 +232,11 @@ $("#one").click(function () {
     $("#submit").hide();
     option.selections();
     $("#youPicked").hide();
-    
   });
-
+  
   $("#try").click(function () {
     location.reload();
   });
-
   $("#question1").append(option.text1())
   $("#question2").append(option.text2())
   $("#question3").append(option.text3())
@@ -255,7 +245,10 @@ $("#one").click(function () {
   option.firstQuestionFadeOn();
 });
 
-  
+
+
+
+
 
 
 
