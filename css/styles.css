@@ -9,6 +9,7 @@ body {
 #form1-go-back{
   display: none;
 }
+
 form {
   margin: auto;
   padding-top: 15px;
@@ -189,8 +190,8 @@ form {
 
 #form-group1{
   display: none;
-  
 }
+
 #beverage{
   box-shadow: inset 0 0 10px #000000;
 }
@@ -198,6 +199,7 @@ form {
 #form-group2{
   display: none;
 }
+
 #movie{
   box-shadow: inset 0 0 10px #000000;
 }
@@ -205,12 +207,14 @@ form {
 #form-group3{
   display: none;
 }
+
 #animal{
   box-shadow: inset 0 0 10px #000000;
 }
 
 #form-group4{
   display: none;
+
 }
 #color{
   box-shadow: inset 0 0 10px #000000;
@@ -226,10 +230,11 @@ form {
 
 .form-group{
   width: 200px;
- }
+}
+ 
  .form-group1{
   width: 200px;
- }
+}
 
 #centerFirst{
   text-align: center;
@@ -251,16 +256,13 @@ form {
   color: white;
 }
 
-
 #youPicked{
   color: white;
- text-align:left;
- font-size:small ;
- margin-left: 100px;
+  text-align:left;
+  font-size:small ;
+  margin-left: 100px;
   position: absolute;
- 
-
-}
+ }
 
 #leftList{
   text-align:left;
