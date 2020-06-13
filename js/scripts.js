@@ -1,91 +1,15 @@
-function Options(option1, option2, option3, option4, option5) {
+function Options(option1, option2, option3, option4, option5, optionTotal, language, grandTotal) {
   this.option1 = option1;
   this.option2 = option2;
   this.option3 = option3;
   this.option4 = option4;
   this.option5 = option5;
-  this.counterTotal = 0;
- }
+  this.optionTotal = optionTotal;
+  this.grandTotal = grandTotal;
+  this.language = language;
+}
  
-let option = new Options();
-
-Options.prototype.firstQuestionFadeOn = function () {
-  $("#firstQuestion0").delay(0).fadeIn(200)
-  $("#firstQuestion1").delay(200).fadeIn(200)
-  $("#firstQuestion2").delay(600).fadeIn(200)
-  $("#firstQuestion3").delay(800).fadeIn(200)
-  $("#firstQuestion4").delay(1000).fadeIn(200)
-  $("#question1").show();
-  $("#form-group1").delay(1100).fadeIn(200)
-  $("#one").delay(1300).fadeIn(200)
-}
-
-Options.prototype.secondQuestionFadeOn = function () {
-  $("#secondQuestion0").delay(0).fadeIn(200)
-  $("#secondQuestion1").delay(200).fadeIn(200)
-  $("#secondQuestion2").delay(600).fadeIn(200)
-  $("#secondQuestion3").delay(800).fadeIn(200)
-  $("#secondQuestion4").delay(1000).fadeIn(200)
-  $("#form-group2").delay(1100).fadeIn(200)
-  $("#two").delay(1300).fadeIn(200)
-}
-
-Options.prototype.thirdQuestionFadeOn = function () {
-  $("#thirdQuestion0").delay(0).fadeIn(200)
-  $("#thirdQuestion1").delay(200).fadeIn(200)
-  $("#thirdQuestion2").delay(600).fadeIn(200)
-  $("#thirdQuestion3").delay(800).fadeIn(200)
-  $("#thirdQuestion4").delay(1000).fadeIn(200)
-  $("#form-group3").delay(1100).fadeIn(200)
-  $("#three").delay(1300).fadeIn(200)
-}
-
-Options.prototype.fourthQuestionFadeOn = function () {
-  $("#fourthQuestion0").delay(0).fadeIn(200)
-  $("#fourthQuestion1").delay(200).fadeIn(200)
-  $("#fourthQuestion2").delay(600).fadeIn(200)
-  $("#fourthQuestion3").delay(800).fadeIn(200)
-  $("#fourthQuestion4").delay(1000).fadeIn(200)
-  $("#form-group4").delay(1100).fadeIn(200)
-  $("#four").delay(1300).fadeIn(200)
-}
-
-Options.prototype.fifthQuestionFadeOn = function () {
-  $("#fifthQuestion0").delay(0).fadeIn(200)
-  $("#fifthQuestion1").delay(200).fadeIn(200)
-  $("#fifthQuestion2").delay(600).fadeIn(200)
-  $("#fifthQuestion3").delay(800).fadeIn(200)
-  $("#fifthQuestion4").delay(1000).fadeIn(200)
-  $("#form-group5").delay(1100).fadeIn(200)
-  $("#five").delay(1300).fadeIn(200)
-}
-
-Options.prototype.firstQuestionInputted = function () {
-  this.option1 = parseInt($("#beverage").val())
-  if (!this.option1) {
-    $("#warning").text("please choose an option")
-    $("#form1-go-back").show()
-    $("#warning").show()
-  } else {
-    option.secondQuestionFadeOn()
-  }
-}
-
-Options.prototype.secondQuestionInputted = function () {
-  this.option2 = parseInt($("#movie").val())
-}
-
-Options.prototype.thirdQuestionInputted = function () {
-  this.option3 = parseInt($("#animal").val())
-}
-
-Options.prototype.fourthQuestionInputted = function () {
-  this.option4 = parseInt($("#color").val())
-}
-
-Options.prototype.fifthQuestionInputted = function () {
-  this.option5 = parseInt($("#music").val())
-}
+const option = new Options();
 
 Options.prototype.text1 = function () {
   const question = "what is your favorite beverage?"
@@ -143,32 +67,22 @@ Options.prototype.text5 = function () {
 }
 
 Options.prototype.selections = function () {
-  this.counterTotal = this.option1 + this.option2 + this.option3 + this.option4 + this.option5;
-
-  if (this.counterTotal <= 5) {
-    $("#results").text("your language is C#!")
-  } else if (this.counterTotal > 5 && this.counterTotal <= 10) {
-    $("#results").text("your language is JavaScript!")
-  } else if (this.counterTotal > 10 && this.counterTotal <= 15) {
-    $("#results").text("your language is Python!")
-  } else if (this.counterTotal > 15 && this.counterTotal <= 20) {
-    $("#results").text("your language is Ruby!")
-  } else {
-    $("#results").text("please choose one of each option")
-  }
-}
-
-Options.prototype.youPicked = function () {
-  $("#youPicked").append("<ul id=leftList> You picked: </ul>" + "<li>" + "Favorite beverage:" + " " + $("#beverage option:selected").text() + "</li>"
-    + "<li>" + "Favorite movie:" + " " + $("#movie option:selected").text() + "</li>"
-    + "<li>" + "Favorite animal:" + " " + $("#animal option:selected").text() + "</li>"
-    + "<li>" + "Favorite color:" + " " + $("#color option:selected").text() + "</li>"
-    + "<li>" + "Favorite music:" + " " + $("#music option:selected").text() + "</li>")
+  if (option.grandTotal <= 5) {
+      option.language ="your language is C#!"          
+    } else if (option.grandTotal > 5 && option.grandTotal <= 10) {
+      option.language ="your language is JavaScript!"     
+    } else if (option.grandTotal > 10 && option.grandTotal <= 15) {
+      option.language ="your language is Python!"    
+    } else if (option.grandTotal > 15 && option.grandTotal <= 20) {
+      option.language ="your language is Ruby!"   
+    } else {
+      option.language ="please choose one of each option"
+    }
+      return option.language
 }
 
 $(document).ready(function () {
   $("#form1-go-back").click(function () {
-    option.firstQuestionInputted();
     $("#first-form").show();
     $("#form-group1").show();
     $("#question1").show();
@@ -178,12 +92,19 @@ $(document).ready(function () {
   });
   
   $("#one").click(function () {
+    option.optionTotal = parseInt($("#beverage").val())
     $("#first-form").hide();
     $("#form-group1").hide();
     $("#question1").hide();
     $("#question2").show();
     $("#one").hide();
-    option.firstQuestionInputted();
+    $("#secondQuestion0").delay(0).fadeIn(200)
+    $("#secondQuestion1").delay(200).fadeIn(200)
+    $("#secondQuestion2").delay(600).fadeIn(200)
+    $("#secondQuestion3").delay(800).fadeIn(200)
+    $("#secondQuestion4").delay(1000).fadeIn(200)
+    $("#form-group2").delay(1100).fadeIn(200)
+    $("#two").delay(1300).fadeIn(200)
   });
 
   $("#two").click(function () {
@@ -192,8 +113,15 @@ $(document).ready(function () {
     $("#question2").hide();
     $("#question3").show();
     $("#two").hide();
-    option.secondQuestionInputted();
-    option.thirdQuestionFadeOn();
+    $("#thirdQuestion0").delay(0).fadeIn(200)
+    $("#thirdQuestion1").delay(200).fadeIn(200)
+    $("#thirdQuestion2").delay(600).fadeIn(200)
+    $("#thirdQuestion3").delay(800).fadeIn(200)
+    $("#thirdQuestion4").delay(1000).fadeIn(200)
+    $("#form-group3").delay(1100).fadeIn(200)
+    $("#three").delay(1300).fadeIn(200)
+    option.optionTotal += parseInt($("#movie").val())
+    
   });
 
   $("#three").click(function () {
@@ -202,8 +130,15 @@ $(document).ready(function () {
     $("#question3").hide();
     $("#question4").show();
     $("#three").hide();
-    option.thirdQuestionInputted();
-    option.fourthQuestionFadeOn();
+    $("#fourthQuestion0").delay(0).fadeIn(200)
+    $("#fourthQuestion1").delay(200).fadeIn(200)
+    $("#fourthQuestion2").delay(600).fadeIn(200)
+    $("#fourthQuestion3").delay(800).fadeIn(200)
+    $("#fourthQuestion4").delay(1000).fadeIn(200)
+    $("#form-group4").delay(1100).fadeIn(200)
+    $("#four").delay(1300).fadeIn(200)
+    option.optionTotal += parseInt($("#animal").val())
+    
   });
 
   $("#four").click(function () {
@@ -212,8 +147,15 @@ $(document).ready(function () {
     $("#question4").hide();
     $("#question5").show();
     $("#four").hide();
-    option.fourthQuestionInputted();
-    option.fifthQuestionFadeOn()
+    $("#fifthQuestion0").delay(0).fadeIn(200)
+    $("#fifthQuestion1").delay(200).fadeIn(200)
+    $("#fifthQuestion2").delay(600).fadeIn(200)
+    $("#fifthQuestion3").delay(800).fadeIn(200)
+    $("#fifthQuestion4").delay(1000).fadeIn(200)
+    $("#form-group5").delay(1100).fadeIn(200)
+    $("#five").delay(1300).fadeIn(200)
+    option.optionTotal += parseInt($("#color").val())
+    
   });
 
   $("#five").click(function () {
@@ -221,36 +163,39 @@ $(document).ready(function () {
     $("#form-group5").hide();
     $("#question5").hide();
     $("#five").hide();
-    option.fifthQuestionInputted();
+    option.optionTotal += parseInt($("#color").val())
     $("#submit").show();
-    option.youPicked();
+    $("#youPicked").append("<ul id=leftList> You picked: </ul>" + "<li>" + "Favorite beverage:" + " " + $("#beverage option:selected").text() + "</li>"
+    + "<li>" + "Favorite movie:" + " " + $("#movie option:selected").text() + "</li>"
+    + "<li>" + "Favorite animal:" + " " + $("#animal option:selected").text() + "</li>"
+    + "<li>" + "Favorite color:" + " " + $("#color option:selected").text() + "</li>"
+    + "<li>" + "Favorite music:" + " " + $("#music option:selected").text() + "</li>")
   });
 
   $("#submit").click(function () {
     $(".btn btn-primary").removeClass("")
     $("#try").show();
     $("#submit").hide();
-    option.selections();
     $("#youPicked").hide();
+    option.grandTotal = option.optionTotal
+    $("#results").text(option.selections())
   });
   
   $("#try").click(function () {
     location.reload();
+  
   });
-  $("#question1").append(option.text1())
-  $("#question2").append(option.text2())
-  $("#question3").append(option.text3())
-  $("#question4").append(option.text4())
-  $("#question5").append(option.text5())
-  option.firstQuestionFadeOn();
+    $("#question1").append(option.text1())
+    $("#question2").append(option.text2())
+    $("#question3").append(option.text3())
+    $("#question4").append(option.text4())
+    $("#question5").append(option.text5())
+    $("#firstQuestion0").delay(0).fadeIn(200)
+    $("#firstQuestion1").delay(200).fadeIn(200)
+    $("#firstQuestion2").delay(600).fadeIn(200)
+    $("#firstQuestion3").delay(800).fadeIn(200)
+    $("#firstQuestion4").delay(1000).fadeIn(200)
+    $("#question1").show();
+    $("#form-group1").delay(1100).fadeIn(200)
+    $("#one").delay(1300).fadeIn(200)
 });
-
-
-
-
-
-
-
-
-
-
