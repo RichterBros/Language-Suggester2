@@ -9,7 +9,7 @@ function Options(option1, option2, option3, option4, option5, optionTotal, langu
   this.language = language;
 }
  
-const option = new Options();
+const option = new Options;
 
 Options.prototype.text1 = function () {
   const question = "what is your favorite beverage?"
